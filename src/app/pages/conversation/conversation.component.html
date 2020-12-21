@@ -1,1 +1,213 @@
-<p>conversation works!</p>
+<div class="chat">
+  <!-- Left  -->
+  <div class="chat__left">
+    <div class="chat__left__info">
+      <img src="assets/img/icon-back.svg" alt="" />
+      <span>Chat</span>
+    </div>
+
+    <div class="chat__left__search input-group">
+      <span class="input-group-prepend">
+        <div class="input-group-text bg-transparent border-right-0">
+          <i class="fa fa-search"></i>
+        </div>
+      </span>
+      <input
+        class="form-control py-2 border-left-0 border"
+        type="search"
+        placeholder="Tìm kiếm "
+        id="example-search-input"
+      />
+    </div>
+
+    <div class="chat__left__friends">
+      <div class="chat__left__friends__item">
+        <img
+          src="{{ avatar.ava2 }}"
+          class="chat__left__friends__item__img rounded-circle user_img_msg"
+        />
+        <div class="chat__left__friends__item__content">
+          <span class="chat__left__friends__item__content__name">Name</span>
+          <br />
+          <span class="chat__left__friends__item__mess">xin chao 1212121</span>
+          <span class="chat__left__friends__item__mess__time"
+            >9:12 AM Today</span
+          >
+        </div>
+      </div>
+
+      <div class="chat__left__friends__item">
+        <img
+          src="https://vignette.wikia.nocookie.net/anime-armageddon/images/d/df/QDK8i-Iw_400x400.jpg/revision/latest?cb=20180826203351"
+          class="chat__left__friends__item__img rounded-circle user_img_msg"
+        />
+        <div class="chat__left__friends__item__content">
+          <span class="chat__left__friends__item__content__name">Name</span>
+          <br />
+          <span class="chat__left__friends__item__mess">xin chao 1212121</span>
+          <span class="chat__left__friends__item__mess__time"
+            >9:12 AM Today</span
+          >
+        </div>
+      </div>
+
+      <div class="chat__left__friends__item">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBUQEBAVFRUXFRYVFRUVFRUVFhUVFRUXGBUVFRYYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFy0dHR0tLS0tLS0tLS0tLS0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLf/AABEIAMsA+AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAUBAwYCBwj/xAA/EAABAwIDBQUFBgUDBQEAAAABAAIRAwQhMUEFElFhcQYigZGhEzKxwfAHFCNCYtFScoLh8RWSsjRjc6LCM//EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAQEAAgICAQQDAAAAAAAAAAABAhEDIRIxURMiMkEEYXH/2gAMAwEAAhEDEQA/APqiIsolhFlYQZREQEREBERARYc6MVV7W20yi2RDj3jgct0SZ8vRRsWy0V7umwEveABmSYA6nIL5nt/7Q6/u2xaDk4bocWnD8w7pGeIJ8Fw+1O0d5WM1ahPL3QP5QMvBVuXwtMX2t/bKyBg1vEBxHmBC2s7V2RiK+eR3Xx57sL4C2+J49N53zOSmWUuyqFvzywxOCp5Vfwj7dX7YWTCQajjGBLKVVwnOJDc8FJ2b2ltK5DaVZpcRO6e6/wD2Oh3ovir6bgINQE5yQD5OifVehcXVIiq4ueG5OkOI3R3XNfmI58wZEqZmi8b7+Ci5bsZ2npXLAwuAqR7uUwM2jQctIXUytJds7BERSCIiAsoiAiIgIiICIiDWiIgLKwiAsoiAiIgKBtra9G1pGtWdDRgBq52jWjU4FTnGBJMdV8D7fdp3XVy4Nd+G0ljcc2g4HoSJ8BwUWpkWHaf7Rn3NJ9D2AaC4Oa4O7zd0gicIORyjPljxlTaVV8TUd0JKiPBccF7osDcTnzyHgqVeRYW9wGjvAHCJ59DhOWmi1XLg7Frj0/bEqPn+YFbaZjVUXeaZcTjnzzVjZ05wAMxI68Dx1WtlUZOx4E6dCraypsOcjgRj5/XBVyq2OLFnbTOYIxIzBHEfX97K0qgHcMGciDgYzI4EAZfpPhPtrQuHcG8RjlB6xkTj4qtubAtO80RjiACN0jHAY8vhiFWWVazTS9xpfiUu6Q6QWyIc0+8IyzOXEr6B2N7btrAUrkhr8t/AMJ05Nnyk4ZwPnW0LjHDBwxc05HD0z+tYTe6Q9sw4ZcDqD5fBaY1llJX6LCLgfs/7XMeG2lSd/HdcTM6hp16ZrvltLtjZoREUgsrCygIiICIiAsrCINaIiAiIgyiIgIiIOO+1Laxo2JptPfrH2cTjuQTUdHCAGk/rXwmq5oMnH0C6ntvt59zVfWJIG8WU26NptwHiTJJ4nkuPawuMKlXj06q44CI4DBYFJ2Bg4+qn09nREkGfDwxyPJWLdmPkNExI7pykzGGkgEeBVLV5ip6dI6qd/pz4kYiJBH1mrm2sQQZGAGJ/hiYJ+B4FSv8ATi1hqsx3ZBaNdZ6ZHyVLWkkUFjS3juOz56q3t7J7CXU9BJA4RMrfe2DajG16WLu44dHnLrPwVnb3TGMZUIO49syNCYIGGnveqrVnqx25uQarAGmBvN7u66CJ5T9c4W0drgvcDnnhrwPrK8BzBUfRJmk4lrTrLgd09PcHmuZvN5tQsObZaecYD4p4q+S4dcMrPjAGIE4Sf35HNV1z3e48EQcOR+vkq6pvAz9aKdSuvaN3KnQHUcDKvJpW9tlKsQA5ubZMjUZlfWPs57UuuWmhWfvPAljj7zmiAQ4fxCc9R0Xx4VN1xbzyP19YqX2e2q+2rseww5jpHOfynkcQeq0nTKv0cii7Mv2V6LK9M917QRy4g8wZHgpS0UFlYWUBERAREQEREGtERAREQZREQEReK1VrGue4w1oLnHgGiSfIIPzt2xoNZc1WM91tR7Rl+VxGHkqqytwTlKsNu3Tqjt6MyXnH8zyXOPiSoVldbp92VjlW2K7+6mPdMkRkHAiIjDMeqzQuCzU93Fs4yCcQZzhwBE6jHn7s9s6FvorijYsqgOa2FlctNpjtU2txUDt8CMxqd4HCCNTg0eErVRu6zDvjkOoxiegAH9IXZW+yWtbgMdJ0UevscCmAAeGXM4+AKp9Rp9JzQvnAOaB3XAkDKN4yAP5Zw5Beqt9+AKBGW9y/PvtjzcrRuzPddkG49Y+K009ivqvLgJ1U+aPpqKi85mcDPkZAnqths3VKm8RmBPUAfID1XSU+z7xEt55YrZW2W8ZCOieZ4OffsUGJcBmemMAdYnBVdbZzmOxGUTyJyC637gRx8B8UqWm+0D0I+uStM1bg5M2+/jEkGD/LjBnRQa9B1OoM4OLSeH75hdsy0pMOOBy8v8rR2gsWVKZewYNhwjTiPj5NGi0mTHLF2n2R7Q3rd9A/kcHDo8Yx4gn+pd8vkn2Y1jTqOnItAPg7D4r6yx0iVrjemWU7e0RFZUREQEREBERBrREQFlYRBlFhZQFE2vb+0t6tLLfpPZP8zSPmpaIPzYCN0vflgAOcecQvFtZmpiAArHtRYGjVdTjAVKg/2kR6Eea3bEZJE5LnyunThN1J2PsCDvOjpmuzsqIaBCiWjBEqytnDQLkzytduOMkTaVIlenW85wjZ1K2BreJKqlHOz2ax8lsbQaNQFsLW8D5rO63+FWQ8VGzkQVBrtORU+pTbpIUSqFFTFXVpKvu2E5fUZFXNVqgVBipxqMooLiu4S17ThqBj/jmtdnd7zi2ZBGPDkY8fVZ2652BGYVfsZ81HTyI+JXRPTky6rpOzXdc4Dhn0IC+obFr79IFfNNhNxe7p6mT8V3/Zh3cI5rbBjmvERFqyEREBERAREQa1lYWUBERAREQEREHzP7TNmj2ntOI3vSD8AuV2CyT9ZL6Z9oNvNFj4ycWno8f2XC7Ds4BPOPJc3K6uGry3ZhClW2BWmiQtrrpjcSQBxJgea5bHZMltQpArf7IDRcy/tRRaYa7e5jI9Dqr/AGdtJlZsg/uOqnwv7R5y+m8MbqFsaAcgvTWCFqr1Qxspo28V2QoVamq297WU2OLXg+n7qNS7UUX4SQf1CMPPJT4X4V+pPlY1W4KvrNXqptWmTBd+y0tuWuPdcD0UeNW8pUK9tA4FUdnbRU8P/oA/Nda9mi52IeTww8ZBW2Hpz8ntdbGaIf1HoF2vZY4OXGbGxpyNXH0Xa9l290lb4e3Pn6X6LCytWQiIgIiIgRERLWsrCygIsLKAiIgIiIKjtXR3rR8ZjdcPBw/dcFskf/pwDzHkux7VB5c1ocQ1zTEEgbwOM8cC1cls2mR7QHMPIPgMVzct3bPh08WNkl+VTtXazw806LSYzOeJ0wUF2y76sRvNkZ5wJ44xlp9T0VLZ7WneI1nqtFxt4NLmtDnboJIYJgfqOTQqS69Rtcd95VHtuzkQahgxGGPnxV3sih7J2BGMz8j8VzlPtC97gPYZndwqgukEAkj8vvCJjlKth7Vj917XNPB2fpgRzUZeS2Ex/Ts6dTBQtqk7scV52TckiHZhRNvVzgGrOVdzt5suicXOhRWbCpOONeP6fmeuisqViXOxcG/qdiG84/MVUbatrinWe2jUqvDSNx7XQADukyGtx4RIILRwWuNvyzyxx+E13ZqnGFVzvL5LXS2cWvBbhxGh8I+aj0G3bWsc2oXuxJa4R3Z7sPGc8CuhsGufi5u6YxCi2z2ST4eKROqpn2xNVwH8UxxxBV6+lBKgVBu1t7p+8+inG9KZztJpWPsg2m33omeEYldz2cb+HOuvXVck3FntBjn1xBaBj1XYbCcBSAVuC91H8ifbFosoi6nGIiICysIiGURES1IiICysLKAiIgIiIKftM2abTzgeMfsuQoMIfUBz3/ku62vTmnP8L2O/9gD6ErjrtkV3kZGCPh8ly8s+7/XXxX7J/Ve3WzXsLSqqhscMlrcA6Q7D3gcO96q6typzaQKwmWnTrbnrXYNFrt4TvAgtjSDhPHirF9uTi4kni4kx9QrL2YGijXbsFNzJij25gladqsmCFm1qS5eNoVFnL2vrpss24Rp8FP8Au53YwgqFs3vCQrNoKtMqr4oX3HKchgAvW4AMlYObgq+4KWmlfdjFVtdsu8vQj+/kp9d2Kj0bN1R4a3qeg/ytMfTHL2uK9Rg3g04OZvRqDnituz75zXNbpgFCq24EtbgDAPP+2fks2uNQdVpxfKnNd6jvGHBel5p5DovS6nGIiICIiIEREGtEREiIsoCIiIERES13FLeY5vEEeOhXH1beQXx3ge9HkemIXaLn9pUix9TDuvlwOmm9PmT0WPLjbJY24ctblUlq+CrOk9U2ToU2lUXHfbvwu4s2slR9psApkrdb1Fr2sJZxggkcRj+8+Chb9q3ZVvK2bYsYEFQ7Z1YPlgaWxJAOIM5LzffeXguaAIx72M+RSYnk2dnqxZULHeHgumfTBxC5myaTUacwMzBEyI16+i6Vp7qlVGqlVd05Trpyqq5VUodR2KlbIEP3p1AiYkOMYSoNU4re62aTTfHeZ3mngSZ8ch5LfCbjm5LqpdW53pOhiOgzXvZzZqN6qMrTYNDeqA8FtjNdMcst9uvYMF6QIt2AiIgIiICIiIa1lYWUSIiIgRERIiIgKBtu2FSi5pEyD5EYqevNRsiEHz32YYAAIAEccsNeilUXrbti0LDOm8fX/ChNdELg5ZqvQ4st4xcWzlitVnVRm1cBC11XgCXGBqstbbWt9lEmdVJrNERyVR/qrG6gcAYM+awNvUzgXADwzV5hU+NqXShuGX1/hTqFxhnmqB+16RMkjqFIt7hr/cd/Y8VHhpW2xPuyqus5S6ryW4que7FRIi1qqHFTXDThA8lDDZc0c8emqmNxK6eP05uW9trLZxjDNdVsWy3Gyc16sLMbjTGismthdEmnNcmURFZUREQERZQEREQ1IiIllFhZQEREBERAREQV227L2lFwAxA3h1GK4ouwX0dcN2isvZVCWjuuxHI6hc/Nhvt0cGerpi1xiVi/2cKkEOPMTmo1pWwVlRdK493Gu2K6lsxjPeaOcL2WW40PLCFbGhK0/c8dPr6K0nJWk5LFabFj8hA5qbYWzaQgKR92IUerKplnarbv283bxCqHOxUq7qKrq1o6nADUngFbGMsqmUKg341gn5fXip1s2XAc1XbHty6tun3nNd5gSB6KX2U2nRuK3s2ktqNJ3qT4D2lph2GRg6gldOE6cvJe30G3bDQOS2ryFldDnZRERAiIiREREMoiINSIiAiIiWUWEQZRYWUQIiIkXL9s4c1kZ78eG65Wu39tU7VjHPxdUqMpUmjNz3uAHgJkngOJC5/tI0ggnV7AP5fZk/GfJZ8n41fj/KKJpdTcN7I5HRXFnWCxTpNe3dcJCrq7X0DObOPDquGzbvl06ii9bwGwqC02k0jArc6/HFRNxbcqxuKgGSq69XVaLnabAJlUN7tQvO4wT/jCSpmNtRcpI2397jAkmYAGZPAKTZWJaPaVPfIwGjQdB+60bJsodvvxdx0HIK4r5K966jP2hbLfu3lI/qg+IK5f7R7F9retu6JLN8zvNwLazNQdJbHk7iuosKc3VIfrHxUjt5ZitQqtIylw5FuIK6eH8XLz/kuOwPbFl/S3KhDblg/EbkHgYe0YOHEaHkQT1i/LVje1KNRtWk8sewy1zcCD9YRkZIX2vsP9odK7Ao3RbSr5A5U6v8pPuv8A0nPTgNWLullYRSMoiICIiAiIiWtERARERAiIgyiwsoCq+0O36FlS9rXdx3GD36hGjR8TkFaBfm7tBtGtXuq1StUL3CpUYCdGMe4NaAMAABkOZ1UDo7HbNfaW16D6sbrC5zWD3abWgnDid4Mk64cAB9K7T2e/QbUbnScHEcWQ5rvLeLvBfL/sqE37j/2Xf86a+yOALHtORYQR1GKrlNzS+F1ZXN2y2XLA5sESo+zj+G3oFLdkuCPSsUY2dTLso6EhTWdn6DsZf/vd+6xHeU6zcVaWqWID+zNDgT1cT8VpqWbKY3WNAV3dPMZqtrjBW2qi2TMVJrNK92YwWysqVaQ7OWs1zUOVNpd/U7ut+LvJee0mFtWcdKVQ+TCVa7GEW9Q6mpB5gNbA9T5qq7W/9Dcf+Gp/wK7OGaxji5rvOvhSzKFYWjJ9B7GfaVXtgKN0DXpDAOn8WmOAJ98cj56L6pZdq9n1Wtcy7ojeyD3tY6eBa4gg8l+awVOpuMdU0P0+xwIkEEHIjEHoVlfmvZm2Lm2M29d9PUhriGnq3I+IX2f7OdsXF1bb9xU33cd1rf8AiAm9DrURFKRERB//2Q=="
+          class="chat__left__friends__item__img rounded-circle user_img_msg"
+        />
+        <div class="chat__left__friends__item__content">
+          <span class="chat__left__friends__item__content__name">Name</span>
+          <br />
+          <span class="chat__left__friends__item__mess">xin chao 1212121</span>
+          <span class="chat__left__friends__item__mess__time"
+            >9:12 AM Today</span
+          >
+        </div>
+      </div>
+
+      <div class="chat__left__friends__item">
+        <img
+          src="https://file.vfo.vn/hinh/2018/01/hinh-anh-girl-xinh-facebook-girl-xinh-tu-suong-2.jpg"
+          class="chat__left__friends__item__img rounded-circle user_img_msg"
+        />
+        <div class="chat__left__friends__item__content">
+          <span class="chat__left__friends__item__content__name">Name</span>
+          <br />
+          <span class="chat__left__friends__item__mess">xin chao 1212121</span>
+          <span class="chat__left__friends__item__mess__time"
+            >9:12 AM Today</span
+          >
+        </div>
+      </div>
+
+      <div class="chat__left__friends__item">
+        <img
+          src="https://1.bp.blogspot.com/-RD0yPf-L2Fo/XmmaLYbT9vI/AAAAAAAAXaA/LQXcRqcNk5UTT-n_-bRlwIWoBOjfbYUYACLcBGAsYHQ/s1600/Anh-gai-dep-facebook-lam-anh-dai-dien%2B%25285%2529.jpgg"
+          class="chat__left__friends__item__img rounded-circle user_img_msg"
+        />
+        <div class="chat__left__friends__item__content">
+          <span class="chat__left__friends__item__content__name">Name</span>
+          <br />
+          <span class="chat__left__friends__item__mess">xin chao 1212121</span>
+          <span class="chat__left__friends__item__mess__time"
+            >9:12 AM Today</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right  -->
+  <div class="chat__right">
+    <div class="chat__right__info container-fluid">
+      <div class="chat__right__info__user">
+        <img src="{{ avatar.ava2 }}" class="rounded-circle user_img_msg" />
+        <div class="chat__right__info__user__name">Hoàng Vũ</div>
+      </div>
+      <img class="chat__right__info__call" src="/assets/img/icon-phone.svg" />
+    </div>
+
+    <!-- Order infor -->
+    <div class="chat__right__order container-fluid">
+      <div class="chat__right__order__left">
+        <img
+          class="chat__right__order__left__img"
+          src="https://media.wired.com/photos/5be4cd03db23f3775e466767/125:94/w_2375,h_1786,c_limit/books-521812297.jpg"
+          alt=""
+        />
+        <div class="chat__right__order__left__infor">
+          <p class="chat__right__order__left__infor__name">Products ABC</p>
+          <div class="chat__right__order__left__infor__group">
+            <span class="chat__right__order__left__infor__group__price"
+              >500.000 VNĐ</span
+            >
+            <span class="chat__right__order__left__infor__group__date"
+              >21/01/2021</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="chat__right__order__setting">
+        <img src="assets/img/icon-arrow-top.svg" alt="" />
+        <span class="chat__right__order__setting__view">View more...</span>
+      </div>
+    </div>
+
+    <div class="chat-window card-body msg_card_body" style="padding-left: 20px; padding-right: 20px">
+      <div class="d-flex justify-content-start mb-4">
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava2 }}" class="rounded-circle user_img_msg" />
+        </div>
+        <div class="msg_cotainer">
+          Hi Henry?
+          <span class="msg_time">8:40 AM, Today</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-4">
+        <div class="msg_cotainer_send">
+          Hi Vũ, are you keep the delivery of my order?
+          <span class="msg_time_send">8:55 AM, Today</span>
+        </div>
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava1 }}" class="rounded-circle user_img_msg" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-start mb-4">
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava2 }}" class="rounded-circle user_img_msg" />
+        </div>
+        <div class="msg_cotainer">
+          Yes, it's me
+          <span class="msg_time">9:00 AM, Today</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-4">
+        <div class="msg_cotainer_send">
+          Oh, how long it'll be delivered to my home?
+          <span class="msg_time_send">9:05 AM, Today</span>
+        </div>
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava1 }}" class="rounded-circle user_img_msg" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-start mb-4">
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava2 }}" class="rounded-circle user_img_msg" />
+        </div>
+        <div class="msg_cotainer">
+          I am on my way to go to your home, maybe more 1 hour.
+          <span class="msg_time">9:07 AM, Today</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-4">
+        <div class="msg_cotainer_send">
+          Ok, thank you, have a good day
+          <span class="msg_time_send">9:10 AM, Today</span>
+        </div>
+        <div class="img_cont_msg">
+          <img src="{{ avatar.ava1 }}" class="rounded-circle user_img_msg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__right__box">
+        <div class="chat__right__box__add input-group-append">
+          <img src="assets/img/icon-add.svg" alt="" />
+        </div>
+        <textarea
+          name=""
+          class="form-control type_msg chat__right__box__area"
+          placeholder="Type your message..."
+        ></textarea>
+        <div class="input-group-append">
+          <img
+            class="chat__right__box__send"
+            src="assets/img/icon-send.svg"
+            alt=""
+          />
+        </div>
+    </div>
+  </div>
+</div>

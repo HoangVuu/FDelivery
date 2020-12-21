@@ -1,3 +1,4 @@
+import { avatar } from './conversation.constant';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ConversationComponent implements OnInit {
 
   constructor() { }
+
+  readonly avatar = avatar;
 
   ngOnInit(): void {
   }

@@ -1,6 +1,6 @@
 export const menu = [
-  { title: 'Quản lý đơn hàng', iconURl: '/assets/icon1', url: '/' },
-  { title: 'Định tuyến', iconURl: '/assets/icon2', url: '/direct' },
-  { title: 'Theo dõi giao nhận', iconURl: '/assets/icon3', url: '/track-order' },
-  { title: 'Trò chuyện', iconURl: '/assets/icon1', url: '/conversation' }
+  { title: 'Quản lý đơn hàng', iconUrl: '/assets/img/icon1.svg', url: '/' },
+  { title: 'Định tuyến', iconUrl: '/assets/img/icon2.svg', url: '/direct' },
+  { title: 'Theo dõi giao nhận', iconUrl: '/assets/img/icon3.svg', url: '/track-order' },
+  { title: 'Trò chuyện', iconUrl: '/assets/img/icon1.svg', url: '/conversation' }
 ];

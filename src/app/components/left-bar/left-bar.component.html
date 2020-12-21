@@ -8,7 +8,9 @@
       (click)="select(i)"
       *ngFor="let item of menu; let i = index"
     >
-      <a routerLink="{{item.url}}"><img src="" alt="" />{{ item.title }}</a>
+      <a routerLink="{{ item.url }}"
+        ><img class="left-bar__bottom__icon" src="{{ item.iconUrl }}" alt="" />{{ item.title }}</a
+      >
     </li>
   </ul>
 </nav>
