@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "f-delivery"
+  "defaultProject": "f-delivery",
+  "cli": {
+    "analytics": "0862b235-e6d6-4860-9757-b0933c75c599"
+  }
 }

@@ -1,16 +1,10 @@
-<nav id="sidebar">
-  <div class="left-bar__top img bg-wrap text-center py-4">
-    <div class="user-logo">FDelivery</div>
-  </div>
-  <ul class="left-bar__bottom ist-unstyled components mb-5">
-    <li
-      [ngClass]="{ active: selectedIndex == i }"
-      (click)="select(i)"
-      *ngFor="let item of menu; let i = index"
-    >
-      <a routerLink="{{ item.url }}"
-        ><img class="left-bar__bottom__icon" src="{{ item.iconUrl }}" alt="" />{{ item.title }}</a
-      >
-    </li>
-  </ul>
+<nav id="sidebar" style="max-width: 205px;">
+    <div class="left-bar__top img bg-wrap text-center py-4">
+        <div class="user-logo">FDelivery</div>
+    </div>
+    <ul class="left-bar__bottom ist-unstyled components mb-5">
+        <li [ngClass]="{ active: selectedIndex == i }" (click)="select(i)" *ngFor="let item of menu; let i = index">
+            <a routerLink="{{ item.url }}"><img class="left-bar__bottom__icon" src="{{ item.iconUrl }}" alt="" />{{ item.title }}</a>
+        </li>
+    </ul>
 </nav>
