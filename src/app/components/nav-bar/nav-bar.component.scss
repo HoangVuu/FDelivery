@@ -1,11 +1,47 @@
 .nav-bar {
-  font-family: Roboto;
   height: 10vh;
   width: 100%;
   background-color: #2c343e;
+  color: #eeeeee;
   padding: 0 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: 30px;
 
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &__round {
+      font-size: 24px;
+      border-radius: 50%;
+      background: #8b8b8b;
+      padding: 0 13px;
+    }
+
+    &__info {
+      margin-left: 10px;
+      &__name {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      &_sub {
+        font-size: 14px;
+      }
+    }
+
+    .active {
+      background: #4684E6;
+    }
+  }
+
+  &__line {
+    margin: 0 20px;
+    width: 40px;
+    height: 2px;
+    background: #d3d3d3;
+  }
 }
