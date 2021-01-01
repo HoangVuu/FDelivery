@@ -11,6 +11,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ManagementComponent } from './pages/management/management.component';
+import { VehicleComponent } from './pages/vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ManagementComponent } from './pages/management/management.component';
     NavBarComponent,
     LeftBarComponent,
     PageNotFoundComponent,
-    ManagementComponent
+    ManagementComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

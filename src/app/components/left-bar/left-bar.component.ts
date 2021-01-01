@@ -19,7 +19,7 @@ export class LeftBarComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.url); //  /routename
 
-    if (this.router.url === 'conversation') {
+    if (this.router.url === 'conversation' || this.router.url === 'evaluate') {
       this.menu = menu2
     }
     else this.menu = menu1
@@ -28,7 +28,7 @@ export class LeftBarComponent implements OnInit {
   select(index: number) {
     console.log(this.router.url); //  /routename
 
-    if (this.router.url === '/conversation') {
+    if (this.router.url === '/conversation' || this.router.url === '/evaluate') {
       this.menu = menu2
     }
     else { this.menu = menu1 }
