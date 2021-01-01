@@ -1,29 +1,17 @@
 <div class="nav-bar">
-  <div class="nav-bar__item">
-    <div class="nav-bar__item__round">1</div>
-    <div class="nav-bar__item__info">
-      <div class="nav-bar__item__info__name">Đơn hàng</div>
-      <div class="nav-bar__item__info__sub">99 đơn</div>
-    </div>
-  </div>
-
-  <div class="nav-bar__line"></div>
-
-  <div class="nav-bar__item">
-    <div class="nav-bar__item__round">2</div>
-    <div class="nav-bar__item__info">
-      <div class="nav-bar__item__info__name">Phương tiện</div>
-      <div class="nav-bar__item__info__sub">3 đơn vị</div>
-    </div>
-  </div>
-
-  <div class="nav-bar__line"></div>
-
-  <div class="nav-bar__item">
-    <div class="nav-bar__item__round active">3</div>
-    <div class="nav-bar__item__info">
-      <div class="nav-bar__item__info__name">Điều hướng</div>
-      <!-- <div class="nav-bar__item__info__sub">3 đơn vị</div> -->
-    </div>
-  </div>
+  <ng-container *ngFor="let item of STEP; let i = index">
+    <a (click)="select(i)" routerLink="{{ item.link }}" class="nav-bar__item">
+      <div
+        class="nav-bar__item__round"
+        [ngClass]="{ active: selectedIndex == i }"
+      >
+        {{ item.number }}
+      </div>
+      <div class="nav-bar__item__info">
+        <div class="nav-bar__item__info__name">{{ item.name }}</div>
+        <div class="nav-bar__item__info__sub">{{ item.sub }}</div>
+      </div>
+    </a>
+    <div [ngClass]="{ hide: item.isHide }" class="nav-bar__line"></div>
+  </ng-container>
 </div>

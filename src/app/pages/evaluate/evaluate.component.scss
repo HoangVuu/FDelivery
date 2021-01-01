@@ -1,8 +1,14 @@
 .evaluate {
+  
   &__search {
-    width: 50%;
+    position: relative;
+    width: 40%;
+    height: 8%;
+    margin: 10px 0 30px 20px;
 
     &__icon {
+      position: absolute;
+      top: 35%;
     }
 
     &__input {
@@ -11,11 +17,13 @@
   }
 
   &__info {
+    height: 570px;
     display: flex;
     border: 1px solid #c4c4c4;
     margin: 15px;
     padding: 30px;
     border-radius: 5px;
+    // height: 90%;
 
     &__left {
       font-size: 16px;
@@ -65,29 +73,29 @@
         padding-bottom: 25px;
       }
 
-      &__row{
+      &__row {
         display: flex;
         margin-bottom: 13px;
 
-        &__label{
+        &__label {
           font-weight: 700;
         }
 
-        &__text{
+        &__text {
         }
       }
 
-      &__line{
+      &__line {
         height: 2px;
         width: 70%;
-        background-color: #2390DE;
+        background-color: #2390de;
         margin: 20px 0;
       }
     }
 
-    &__btn{
+    &__btn {
       cursor: pointer;
-      background-color: #2390DE;
+      background-color: #2390de;
       padding: 10px 20px;
       border-radius: 50px;
       width: 150px;
@@ -95,4 +103,61 @@
       color: #ffffff;
     }
   }
+
+  input {
+    color: #000000;
+    border: none;
+    padding: 10px 5px 10px 35px;
+    height: 50px;
+    border-bottom: 1px solid #000000;
+    border-radius: 0;
+  }
+
+  input:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #c6c6c6;
+  }
+}
+
+.active-pink-2 input.form-control[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}
+.active-pink input.form-control[type="text"] {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}
+.active-purple-2 input.form-control[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-purple input.form-control[type="text"] {
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-cyan-2 input.form-control[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input.form-control[type="text"] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan .fa,
+.active-cyan-2 .fa {
+  color: #4dd0e1;
+}
+.active-purple .fa,
+.active-purple-2 .fa {
+  color: #ce93d8;
+}
+.active-pink .fa,
+.active-pink-2 .fa {
+  color: #f48fb1;
 }

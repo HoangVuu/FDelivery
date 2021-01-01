@@ -12,6 +12,7 @@ import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ManagementComponent } from './pages/management/management.component';
 import { VehicleComponent } from './pages/vehicle/vehicle.component';
+import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { VehicleComponent } from './pages/vehicle/vehicle.component';
     LeftBarComponent,
     PageNotFoundComponent,
     ManagementComponent,
-    VehicleComponent
+    VehicleComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

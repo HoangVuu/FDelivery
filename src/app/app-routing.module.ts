@@ -1,3 +1,5 @@
+import { OrderComponent } from './pages/order/order.component';
+import { VehicleComponent } from './pages/vehicle/vehicle.component';
 import { TrackOrderComponent } from './pages/track-order/track-order.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'direct', component: DirectComponent },
   { path: 'evaluate', component: EvaluateComponent },
   { path: 'track-order', component: TrackOrderComponent },
+  { path: 'vehicle', component: VehicleComponent },
+  { path: 'order', component:  OrderComponent },
   { path: '**', component: PageNotFoundComponent, runGuardsAndResolvers: 'always' },
 ];
 

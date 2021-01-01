@@ -8,6 +8,17 @@
   align-items: center;
   padding-left: 30px;
 
+  a {
+    transition: 0.3s all ease;
+    color: white;
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+      outline: none !important;
+      box-shadow: none;
+    }
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -32,10 +43,6 @@
         font-size: 14px;
       }
     }
-
-    .active {
-      background: #4684E6;
-    }
   }
 
   &__line {
@@ -44,4 +51,12 @@
     height: 2px;
     background: #d3d3d3;
   }
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  background: #4684e6;
 }
