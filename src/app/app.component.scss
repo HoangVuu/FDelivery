@@ -289,7 +289,7 @@ svg#clouds {
 
 .app {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
 
   &__left,
@@ -298,10 +298,10 @@ svg#clouds {
   }
 
   &__left {
-    width: 20%;
+    width: 16%;
   }
 
   &__right {
-    width: 80%;
+    width: 84%;
   }
 }

@@ -11,84 +11,112 @@
     />
   </div>
 
-  <div class="evaluate__info">
-    <div class="evaluate__info__left">
-      <div class="evaluate__info__left__title">Khung đánh giá</div>
-      <p class="evaluate__info__left__label">
-        Đánh giá thái độ của nhân viên giao nhận:
-      </p>
-      <img
-        class="evaluate__info__left__icon"
-        src="assets/img/star1.svg"
-        alt=""
-      />
-      <p class="evaluate__info__left__label">
-        Đánh giá chất lượng vận chuyển hàng hóa:
-      </p>
-      <img
-        class="evaluate__info__left__icon"
-        src="assets/img/star2.svg"
-        alt=""
-      />
-      <p class="evaluate__info__left__label">Bình luận của bạn:</p>
-      <textarea class="evaluate__info__left__textarea"></textarea>
-
-      <div class="evaluate__info__btn" style="margin-top: 40px">
-        Đăng nhận xét
+  <div class="evaluate__info" (scroll)="scrollHandler($event)">
+    <div class="evaluate__info__top">
+      <div class="evaluate__info__top__left">
+        <div class="evaluate__info__top__left__title">Khung đánh giá</div>
+       
+  
+        <div class="evaluate__info__top__left__info">
+          <div class="evaluate__info__top__left__info__row">
+            <span>Nhanh chóng</span> <br>
+            <img src="assets/img/star1.svg" alt="">
+          </div>
+  
+          <div class="evaluate__info__top__left__info__row">
+            <span>Chất lượng</span> <br>
+            <img src="assets/img/star2.svg" alt="">
+          </div>
+  
+          <div class="evaluate__info__top__left__info__row">
+            <span>Thái độ</span> <br>
+            <img src="assets/img/star3.svg" alt="">
+          </div>
+        </div>
+  
+        <p class="evaluate__info__top__left__label">Thêm bình luận:</p>
+  
+        <div class="evaluate__info__top__left__suggest">
+          <div class="evaluate__info__top__left__suggest__item">
+            Giao hàng nhanh chóng!!
+          </div>
+  
+          <div class="evaluate__info__top__left__suggest__item">
+            Thái độ phục vụ tốt!!
+          </div>
+  
+          <div class="evaluate__info__top__left__suggest__item">
+            Tốt!!
+          </div>
+        </div>
+  
+        <textarea class="evaluate__info__top__left__textarea" placeholder="Thêm nhận xét tại đây..."></textarea>
+  
+        <div class="evaluate__info__top__btn" style="margin-top: 40px">
+          Đăng nhận xét
+        </div>
+  
+        <div class="evaluate__info__top__more" (click)="scroll(target)">Xem thêm <img src="assets/img/icon-arrow-button.svg" alt=""></div>
+      </div>
+      <div class="evaluate__info__top__right">
+        <div class="evaluate__info__top__right__title">Thông tin đơn hàng</div>
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">Tên sản phẩm:&nbsp;</div>
+          <div class="evaluate__info__top__right__row__text">
+            Bàn phím cơ Akko 3072
+          </div>
+        </div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">Giá trị:&nbsp;</div>
+          <div class="evaluate__info__top__right__row__text">1.690.000 VNĐ</div>
+        </div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">Khách hàng:&nbsp;</div>
+          <div class="evaluate__info__top__right__row__text">Yasuo</div>
+        </div>
+  
+        <div class="evaluate__info__top__right__line"></div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">
+            Nơi nhận hàng:&nbsp;
+          </div>
+          <div class="evaluate__info__top__right__row__text">
+            KTX khu B, Linh Trung, Thủ Đức
+          </div>
+        </div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">
+            Nơi giao hàng:&nbsp;
+          </div>
+          <div class="evaluate__info__top__right__row__text">
+            36 Lê Thánh Tôn, quận 1, TP HCM
+          </div>
+        </div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">Thời gian:&nbsp;</div>
+          <div class="evaluate__info__top__right__row__text">16h20ph, 05/11/2020</div>
+        </div>
+  
+        <div class="evaluate__info__top__right__row">
+          <div class="evaluate__info__top__right__row__label">
+            Nhân viên giao hàng:&nbsp;
+          </div>
+          <div class="evaluate__info__top__right__row__text">Nguyễn Văn Vở</div>
+        </div>
+  
+        <div class="evaluate__info__top__btn" style="margin-top: 63px">Xem thêm</div>
       </div>
     </div>
-    <div class="evaluate__info__right">
-      <div class="evaluate__info__right__title">Thông tin đơn hàng</div>
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">Tên sản phẩm:&nbsp;</div>
-        <div class="evaluate__info__right__row__text">
-          Bàn phím cơ Akko 3072
-        </div>
-      </div>
 
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">Giá trị:&nbsp;</div>
-        <div class="evaluate__info__right__row__text">1.690.000 VNĐ</div>
-      </div>
-
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">Khách hàng:&nbsp;</div>
-        <div class="evaluate__info__right__row__text">Yasuo</div>
-      </div>
-
-      <div class="evaluate__info__right__line"></div>
-
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">
-          Nơi nhận hàng:&nbsp;
-        </div>
-        <div class="evaluate__info__right__row__text">
-          KTX khu B, Linh Trung, Thủ Đức
-        </div>
-      </div>
-
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">
-          Nơi giao hàng:&nbsp;
-        </div>
-        <div class="evaluate__info__right__row__text">
-          36 Lê Thánh Tôn, quận 1, TP HCM
-        </div>
-      </div>
-
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">Thời gian:&nbsp;</div>
-        <div class="evaluate__info__right__row__text">16h20ph, 05/11/2020</div>
-      </div>
-
-      <div class="evaluate__info__right__row">
-        <div class="evaluate__info__right__row__label">
-          Nhân viên giao hàng:&nbsp;
-        </div>
-        <div class="evaluate__info__right__row__text">Nguyễn Văn Vở</div>
-      </div>
-
-      <div class="evaluate__info__btn" style="margin-top: 63px">Xem thêm</div>
+    <div #target class="evaluate__info__bottom">
+      <p class="evaluate__info__top__left__title">Đánh giá và nhận xét</p>
+      <img class="evaluate__info__bottom__stars star1" src="assets/img/danhgia.svg" alt="">
+      <img class="evaluate__info__bottom__stars star2" src="assets/img/danhgia2.svg" alt="">
     </div>
   </div>
 </div>

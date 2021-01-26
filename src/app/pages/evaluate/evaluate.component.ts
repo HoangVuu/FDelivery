@@ -1,3 +1,4 @@
+import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,4 +13,21 @@ export class EvaluateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event: any) {
+    // Handle hide and show name card when scroll
+    const more = document.querySelectorAll<HTMLElement>('.evaluate__info__top__more')[0];
+    const info = document.querySelectorAll<HTMLElement>('.evaluate__info')[0];
+
+    if (info.scrollTop === 0) {
+      more.style.display = 'block';
+    }
+    else {
+      more.style.display = 'none';
+    }
+  }
 }

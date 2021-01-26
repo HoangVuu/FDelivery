@@ -6,13 +6,14 @@
     flex-direction: column;
 
     &__content {
+        overflow: hidden;
         height: 81vh;
         width: 100%;
         justify-content: space-between;
         display: flex;
 
         &__left {
-            width: 60%;
+            width: 62%;
 
             &__info {
                 display: flex;
@@ -37,7 +38,7 @@
                 height: 87%;
 
                 &__choice {
-                    width: 200px;
+                    width: 280px;
                     border-right: 1px solid #777777;
 
                     &__top {
@@ -52,6 +53,11 @@
 
                         &__line {
                             display: flex;
+
+                            &__icon{
+                                padding-left: 22px;
+                                width: 24%;
+                            }
 
                             &__color {
                                 margin-top: 13px;
@@ -126,12 +132,12 @@
                     }
 
                     &__content {
-                        width: 575px;
+                        width:592px;
                         padding-top: 12px;
 
                         img {
                             width: 100%;
-                            padding-bottom: 47px;
+                            padding-bottom: 45px;
                         }
                     }
                 }
